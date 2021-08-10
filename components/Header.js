@@ -1,14 +1,15 @@
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
 import { styled } from "@material-ui/styles";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <HeaderContainer>
       <HeaderLeftContainer>
-        <div>
-          <MenuIcon src="/icons/menuIcon.png" alt="" />
-        </div>
+        <MenuIcon>
+          <Image src="/icons/menuIcon.png" width={20} height={20} alt="" />
+        </MenuIcon>
         <SearchContainer>
           <CustomSearchIcon />
           <Input type="text" placeholder="Search" />
@@ -43,7 +44,7 @@ const HeaderLeftContainer = styled("div")({
   alignItems: "center",
 });
 
-const MenuIcon = styled("img")({
+const MenuIcon = styled('div')({
   marginLeft: "25px",
   marginTop: "25px",
   marginRight: "50px",

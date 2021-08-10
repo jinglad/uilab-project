@@ -1,10 +1,11 @@
 import { styled } from "@material-ui/styles";
+import Image from 'next/image'
 
 const Card = (props) => {
   return (
     <CardContainer>
       <CardLeft style={{ background: `${props.color}` }}>
-        <img src={props.icon} alt="Icon" />
+        <Image width={20} height={20} src={props.icon} alt="Icon" />
       </CardLeft>
       <CardRight>
         <p style={{ fontSize: "18px" }}>{props.title}</p>
